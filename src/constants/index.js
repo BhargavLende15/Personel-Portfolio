@@ -29,10 +29,10 @@ const words = [
 ];
 
 const counterItems = [
-    { value: 100, suffix: "+", label: "Leetcode Questions" },
-    { value: 500, suffix: "+", label: "Linkedin Connections" },
-    { value: 20, suffix: "+", label: "Github Repositories" },
-    { value: 1800, suffix: "+", label: "Kaggle / Hackerank Ranking" },
+    { value: 100, suffix: "+", label: "Leetcode Questions", link: "https://leetcode.com/u/Bhargav_Lende/"},
+    { value: 500, suffix: "+", label: "Linkedin Connections", link: "https://leetcode.com/u/Bhargav_Lende/" },
+    { value: 20, suffix: "+", label: "Github Repositories", link: "https://leetcode.com/u/Bhargav_Lende/" },
+    { value: 1800, suffix: "+", label: "Kaggle / Hackerank Ranking", link: "https://leetcode.com/u/Bhargav_Lende/" },
 ];
 
 const logoIconsList = [
