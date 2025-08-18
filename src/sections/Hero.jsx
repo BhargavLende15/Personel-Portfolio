@@ -27,7 +27,7 @@ const Hero = () => {
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
                             <h1>
-                                Shaping
+                                Blending
                                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
@@ -46,17 +46,16 @@ const Hero = () => {
                   </span>
                 </span>
                             </h1>
-                            <h1>into Real Projects</h1>
-                            <h1>that Deliver Results</h1>
+                            <h1>into real world projects</h1>
+                            <h1>that are future ready</h1>
                         </div>
 
                         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                            Hi, I’m Adrian, a developer based in Croatia with a passion for
-                            code.
+                            Greetings, I’m Bhargav — diving into Data Science & Web Dev.
                         </p>
 
                         <Button
-                            text="See My Work"
+                            text="About Me"
                             className="md:w-80 md:h-16 w-60 h-12"
                             id="counter"
                         />

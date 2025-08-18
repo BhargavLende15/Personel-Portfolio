@@ -20,19 +20,19 @@ const navLinks = [
 const words = [
     { text: "Ideas", imgPath: "/images/ideas.svg" },
     { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
+    { text: "Data", imgPath: "/images/data.jpg" },
     { text: "Code", imgPath: "/images/code.svg" },
     { text: "Ideas", imgPath: "/images/ideas.svg" },
     { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
+    { text: "Data", imgPath: "/images/data.jpg" },
     { text: "Code", imgPath: "/images/code.svg" },
 ];
 
 const counterItems = [
-    { value: 15, suffix: "+", label: "Years of Experience" },
-    { value: 200, suffix: "+", label: "Satisfied Clients" },
-    { value: 108, suffix: "+", label: "Completed Projects" },
-    { value: 90, suffix: "%", label: "Client Retention Rate" },
+    { value: 100, suffix: "+", label: "Leetcode Questions" },
+    { value: 500, suffix: "+", label: "Linkedin Connections" },
+    { value: 20, suffix: "+", label: "Github Repositories" },
+    { value: 1800, suffix: "+", label: "Kaggle / Hackerank Ranking" },
 ];
 
 const logoIconsList = [
