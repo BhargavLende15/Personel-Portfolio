@@ -10,6 +10,22 @@ gsap.registerPlugin(ScrollTrigger);
 const AnimatedCounter = () => {
     const counterRef = useRef(null);
     const countersRef = useRef([]);
+    const cardRefs = useRef([]);
+
+    // Mouse move handler for glow effect
+    const handleMouseMove = (index) => (e) => {
+        const card = cardRefs.current[index];
+        if (!card) return;
+
+        const rect = card.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left - rect.width / 2;
+        const mouseY = e.clientY - rect.top - rect.height / 2;
+
+        let angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
+        angle = (angle + 360) % 360;
+
+        card.style.setProperty("--start", angle + 60);
+    };
 
     useGSAP(() => {
         countersRef.current.forEach((counter, index) => {
@@ -45,14 +61,21 @@ const AnimatedCounter = () => {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        ref={(el) => el && (countersRef.current[index] = el)}
-                        className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center
-                       hover:bg-zinc-800 transition-colors cursor-pointer"
+                        ref={(el) => el && (cardRefs.current[index] = el)}
+                        onMouseMove={handleMouseMove(index)}
+                        className="card card-border rounded-lg p-10 flex flex-col justify-center
+                       hover:bg-zinc-800 transition-colors cursor-pointer relative overflow-hidden block"
                     >
-                        <div className="counter-number text-white-50 text-5xl font-bold mb-2">
-                            0 {item.suffix}
+                        <div className="glow"></div>
+                        <div
+                            ref={(el) => el && (countersRef.current[index] = el)}
+                            className="relative z-10 w-full h-full flex flex-col justify-center"
+                        >
+                            <div className="counter-number text-white-50 text-5xl font-bold mb-2">
+                                0 {item.suffix}
+                            </div>
+                            <div className="text-white-50 text-lg">{item.label}</div>
                         </div>
-                        <div className="text-white-50 text-lg">{item.label}</div>
                     </a>
                 ))}
             </div>
